@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="etiaret.master.cs" Inherits="CRM1.etiaret" %>
+
+<!DOCTYPE html>
+<html>
+
+
+<head runat="server">
+    <link rel="stylesheet" href="css/A.style.css.pagespeed.cf.SrefZvnj6s.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #34495e;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #f39c12;
+                }
+
+        ul li ul {
+            background-color: #2c3e50;
+            display: none;
+            position: absolute;
+            width: 100px
+        }
+
+        ul li:hover ul {
+            display: block;
+        }
+
+        li ul li {
+            display: block;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .navbar a {
+                float: inherit;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                .navbar a:hover {
+                    background-color: red;
+                }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/Content/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+
+
+
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="navbar-nav nav justify-content-center nav-pills" style="width: 100% !important;">
+                <li class="nav-item">
+
+                    <a href="default.aspx" class="nav-link">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+
+                    <a href="siparis.aspx" class="nav-link">Siparişler</a>
+                </li>
+                <li class="nav-item">
+
+                    <a href="Login.aspx" class="nav-link">Yönetim</a>
+                </li>
+                <li class="nav-item" style="float: right !important;">
+
+                    <a class="active" href="sf_sepetim.aspx" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Sepet(<asp:Label ID="lbl_Sepet_urun_Adedi" runat="server" Text=""></asp:Label>)</a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>
